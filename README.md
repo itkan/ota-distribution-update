@@ -66,10 +66,10 @@ HOST: http://polls.apiblueprint.org/
 ### update [GET]
 + Response 200 (application/json)
 
-        {"latestBuildNumber":"1","url":"https://dl.dropboxusercontent.com/s/dssss/manifest.plist","description":"description about latest update"} 
+        {"latestBuildNumber":"2","url":"https://dl.dropboxusercontent.com/s/dssss/manifest.plist","description":"description about latest update"} 
 ```
-- in the last line of below code is a json, which will be read by app
-    - latestBuildNumber - put your latest build number i.e. 1 for above case
+- in the last line of above code is a json, which will be read by app
+    - latestBuildNumber - put your latest build number i.e. 2 for this sample
     - url - put the direct dropbox url of your manifest file
     - description - put what has been updated in the new build
 - copy the mock url from apiary and update the below line removing the feature name from end
