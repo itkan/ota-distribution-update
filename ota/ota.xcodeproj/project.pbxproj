@@ -110,7 +110,6 @@
 				TargetAttributes = {
 					BC95863B1DD73EAD00540478 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = BPX7JS45NY;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -277,10 +276,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BPX7JS45NY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ota/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = in.bsb.wynkmusic;
+				PRODUCT_BUNDLE_IDENTIFIER = in.itkan.inhouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -290,10 +289,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BPX7JS45NY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ota/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = in.bsb.wynkmusic;
+				PRODUCT_BUNDLE_IDENTIFIER = in.itkan.inhouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
