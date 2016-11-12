@@ -15,7 +15,7 @@ This project is in Swift 3.0, let me know if you need help
 Quick Integration:
 
 Step 1:
-- Add ota/CheckUpdate files to your project
+- Add [ota/ota/CheckUpdate](https://github.com/itkan/ota-distribution-update/tree/master/ota/ota/CheckUpdate) files to your project
 
 Step 2: update AppDelegate file
 
@@ -57,10 +57,6 @@ to
 ```
 
 Step 3: Log in to your apiary.io account then copy and paste below code in its editor
-- in the last line of below code is a json, which will be read by app
-    - latestBuildNumber - put your latest build number i.e. 1 for above case
-    - url - put the direct dropbox url of your manifest file
-    - description - put what has been updated in the new build
 ```
 FORMAT: 1A
 HOST: http://polls.apiblueprint.org/
@@ -73,6 +69,10 @@ HOST: http://polls.apiblueprint.org/
 
         {"latestBuildNumber":"1","url":"https://dl.dropboxusercontent.com/s/dssss/manifest.plist","description":"description about latest update"} 
 ```
+- in the last line of below code is a json, which will be read by app
+    - latestBuildNumber - put your latest build number i.e. 1 for above case
+    - url - put the direct dropbox url of your manifest file
+    - description - put what has been updated in the new build
 - copy the mock url from apiary and update the below line removing the feature name from end
 ```
 launchController.apiaryUrl = "https://private-1bb4d9-itkan1.apiary-mock.com/builds/"
