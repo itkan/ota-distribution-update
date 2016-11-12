@@ -7,17 +7,16 @@ Do you need this? if below questions make sense to you, then Yes.
 - do you have to provide build updates for each feature separately?
 
 I used following items to solve my problem:
-- https://apiary.io account
-- https://www.dropbox.com account
+- https://apiary.io - host a static web service
+- https://www.dropbox.com - upload builds (ipa files)
+- http://github.com - source code / apiary integration
 
-This project is in Swift 3.0, let me know if you need help
+## Quick Integration:
 
-Quick Integration:
-
-Step 1:
+**Step 1:**
 - Add [ota/ota/CheckUpdate](https://github.com/itkan/ota-distribution-update/tree/master/ota/ota/CheckUpdate) files to your project
 
-Step 2: update AppDelegate file
+**Step 2:** update AppDelegate file
 
 change code from 
 
@@ -56,7 +55,7 @@ to
     }
 ```
 
-Step 3: Log in to your apiary.io account then copy and paste below code in its editor
+**Step 3:** Log in to your apiary.io account then copy and paste below code in its editor
 ```
 FORMAT: 1A
 HOST: http://polls.apiblueprint.org/
@@ -78,7 +77,7 @@ HOST: http://polls.apiblueprint.org/
 launchController.apiaryUrl = "https://private-1bb4d9-itkan1.apiary-mock.com/builds/"
 ```
 
-Step 3: create first build of new feature
+**Step 4:** create first build of new feature
 - in didFinishLaunchingWithOptions method set currentBuildNumber to 1 as below
 ```swift
     launchController.currentBuildNumber = 1 
@@ -90,7 +89,7 @@ Step 3: create first build of new feature
         - sample manifest.plist / index.html files are added in extras folder for your ease. You have to update urls in these files to make them work for your app.
 - send the link to index.html to your targets for installation of first build.
 
-Step 4: create another build of same feature
+**Step 5:** create another build of same feature
 - in didFinishLaunchingWithOptions method set currentBuildNumber to 2 as below
 ```swift
     launchController.currentBuildNumber = 2 
@@ -101,8 +100,13 @@ Step 4: create another build of same feature
     - now you dont need any other index file
     
 
-Step 6: Now everytime you restart your build 1 a pop-up will appear to install the latest build or do it later, if user taps for update another confirmation is made from user and app is killed to install the latest app. From this way, you never have to communicate the QA / UAT team that new build is available since they will automatically get to know that, when they use build.
+**Step 6:** Now everytime you restart your build 1 a pop-up will appear to install the latest build or do it later, if user taps for update another confirmation is made from user and app is killed to install the latest app. From this way, you never have to communicate the QA / UAT team that new build is available since they will automatically get to know that, when they use build.
 
-Good to do:
+### Good to do:
 1. if you integrate apiary.io with your git repository as I have done in this one, you can update the apiary.io from your code editor itself and when you push your commit the API is automatically updated.
-2. Also instead of using index.html file, host a static website where user can find all the feature builds at one place, and you can eliminate the step of sending link.
+1. Also instead of using index.html file, host a static website where user can find all the feature builds at one place, and you can eliminate the step of sending link.
+
+**Note:**
+- This project is in Swift 3.0, let me know if you need help
+
+
